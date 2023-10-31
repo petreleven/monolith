@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<div class="flex-row mx-auto  bg-[#176B87] border-rd w-md">
+   <h2 class=" grid-cols-2 border-b border-blue-200 bg-[#64CCC5] rounded-t-md dark:bg-blue-700 dark:border-gray-600 text-white-400 text-center">
+      USERS
+   </h2>
+   <ul class="max-w-md space-y-1  list-disc list-inside">
+      {% for user in users %}
+      <li class="text-white pl-1">{{ user.firstname }} {{ user.email }}</li>
+      {% endfor %}
+   </ul>
+</div>
+
+{% endblock content %}
